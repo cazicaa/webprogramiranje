@@ -1,0 +1,45 @@
+body{
+    background-color: green;
+}
+/*login*/
+.loginDiv
+{
+    display: flex;
+    flex-grow: 0 1 auto;
+    flex-direction: column;
+    flex-basis: 250px;
+    width: 150px;
+    flex-wrap: wrap;
+}
+.usernameTB .passwordTB .loginLabel
+{
+    
+display: flex;
+flex-grow: 0 1 auto;
+flex-direction: column;
+flex-basis: 250px;
+width: 150px;
+flex-wrap: wrap;
+}
+/**/
+.userSubDiv
+{
+    border: 2px solid black;
+    width: 400px;
+    flex-basis: 400px;
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+    flex-wrap: wrap;
+}
+.tabelaIgre ,.tabelaKorisnici
+{
+    border: 1px solid black;
+    border-collapse: collapse;
+
+}
+.redIgra,.thIgra,.tdIgra, .redKorisnik, .tdKorisnik, .thKorisnik
+{
+    border: 1px solid black;
+    border-collapse: collapse;
+}

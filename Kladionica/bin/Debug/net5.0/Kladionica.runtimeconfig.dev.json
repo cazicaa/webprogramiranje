@@ -1,0 +1,8 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Caza 2.0\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Caza 2.0\\.nuget\\packages"
+    ]
+  }
+}
