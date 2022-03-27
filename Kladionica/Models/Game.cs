@@ -14,7 +14,7 @@ namespace Kladionica.Models
 
         [Required]
         [Column("TicketNumber")]
-        public int TicketNumber { get; set; }
+        public int TicketNumber { get; set; }//c# pascal case
 
         [Required]
         [Column("ClubName1")]

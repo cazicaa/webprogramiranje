@@ -4,42 +4,59 @@ body{
 /*login*/
 .loginDiv
 {
-    display: flex;
-    flex-grow: 0 1 auto;
-    flex-direction: column;
-    flex-basis: 250px;
     width: 150px;
-    flex-wrap: wrap;
 }
 .usernameTB .passwordTB .loginLabel
 {
     
-display: flex;
-flex-grow: 0 1 auto;
-flex-direction: column;
-flex-basis: 250px;
 width: 150px;
-flex-wrap: wrap;
+}
+.welcomeBack
+{
+    display: flex;
+    flex: 0 1 auto;
+    justify-content:center;
+    align-content: center;
+    
+}
+.adminDiv
+{
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 auto;
+    flex-wrap: wrap;
+    border: 1px solid red;
+
 }
 /**/
 .userSubDiv
 {
     border: 2px solid black;
-    width: 400px;
-    flex-basis: 400px;
-    display: flex;
-    flex-direction: column;
-    min-width: 400px;
-    flex-wrap: wrap;
+    align-self: center;
+    flex: 1 1 auto;
+    height: 100%;
+    width: 100%;
 }
 .tabelaIgre ,.tabelaKorisnici
 {
+    flex-wrap: wrap;
+    background-color: darkgreen;
     border: 1px solid black;
     border-collapse: collapse;
+    /*Ako ima vise bordera u njegovoj deci, spojice se, ali svako dete mora da ima border*/
+    width: 100%; /*Zauzima 100$ sirine roditelja svog */
+
+
 
 }
-.redIgra,.thIgra,.tdIgra, .redKorisnik, .tdKorisnik, .thKorisnik
+.redIgra,.thIgra,.tdIgra, .redKorisnici, .tdKorisnik, .thKorisnik
 {
     border: 1px solid black;
-    border-collapse: collapse;
+    flex: 1 1 auto;
 }
+.buttons
+{
+    flex: 1 1 auto;
+    background-color: rgba(9, 250, 9,90%);
+}
+/**/

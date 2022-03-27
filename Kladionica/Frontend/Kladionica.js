@@ -12,8 +12,6 @@ export class Kladionica
         loginDiv.classList.add("loginDiv");
         host.appendChild(loginDiv);
         
-
-
         let elLabela = document.createElement('label');
         elLabela.classList.add('loginLabel');
         elLabela.innerHTML = 'JMBG';
@@ -21,7 +19,7 @@ export class Kladionica
 
         let tb = document.createElement('input');
         tb.className="usernameTB";
-        tb.name="username"
+        tb.name="username";
         loginDiv.appendChild(tb);
 
         elLabela = document.createElement('label');
@@ -45,10 +43,34 @@ export class Kladionica
     {
         
         let username = document.querySelector(".usernameTB").value;
-        //$$$$$$
-        //username ="1234567890123";
+        
         let pass = document.querySelector(".passwordTB").value;
+
+
+        //$$$$$$ OVO UKLONI IZ KODA
+       // username ="1234567890123";
+       // pass = "123";
+
         //fetchuj svi login data,proveri sa unos, ako je ok crtaj ono sto treba da se crta
+        //$$$PUFF
+        // fetch(url).then( //kada se sve vrati
+        //     result =>{
+        //         //moze da bude json ako je ispravan rez ili text ako je neispravan
+        //         if(result.ok){
+        //             result.json().then(
+        //                 //rdi sta se treba
+        //             )
+        //         }
+        //         else{
+        //             result.text().then(// za bad request
+        //                 data => {
+        //                     console.log(data);
+        //                 }
+        //             )
+        //         }
+        //     }
+        // )
+        //
         fetch("https://localhost:5001/User/VratiKorisnike").then(p =>{
         p.json().then(data =>{
                 let exists= false;

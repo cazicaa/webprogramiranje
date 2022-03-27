@@ -55,12 +55,12 @@ namespace Kladionica.Controllers
             }
 
             Context.Games.Add(game); // lokalno u app dodajem game
-            return Ok(await Context.SaveChangesAsync()); // Ako je ovo 1 vraca nam Task<ActionResult> i sve je uredu
+            return Ok(await Context.SaveChangesAsync()); // Ako je ovo 1 vraca nam Task<ActionResult> i sve je uredu //$_$ok,badrewquest,statuscode za astuion result
 
         }
         catch(Exception e)
         {
-            return BadRequest(e.Message);
+            return BadRequest(e.Message);// vraca string
         }
         
         
@@ -101,7 +101,8 @@ namespace Kladionica.Controllers
             }
             if(prosaoKrozMenjani == true)
             {
-               // Context.Update<Game>(game); // lokalno u app dodajem game
+               // Context.Games.Update(gameX)
+                //Context.Game.Update(gameX); // lokalno u app dodajem game
             return Ok(await Context.SaveChangesAsync()); // Ako je ovo 1 vraca nam Task<ActionResult> i sve je u redu
             }
             else throw new Exception("Ovaj tiket ne postoji");

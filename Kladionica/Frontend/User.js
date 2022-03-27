@@ -16,13 +16,17 @@ export class User
     }
     crtajAdmina(host)
     {
+        let p = document.createElement('p');
+        p.innerHTML = "Dobro dosli nazad admine, " + this.name;
+        p.classList.add('welcomeBack');
+        host.appendChild(p);
+
+
         this.adminContainer = document.createElement('div');
         this.adminContainer.classList.add("adminDiv");
         host.appendChild(this.adminContainer);
 
-        let p = document.createElement('p');
-        p.innerHTML = "Dobro dosli nazad admine, " + this.name;
-        this.adminContainer.appendChild(p);
+
         //div forma za add novi, za menjanje, prikaz svih utakmica
 
         //div za prikaz utakmica
@@ -52,9 +56,10 @@ export class User
         
         //console.dir(response);
         fetch(url).then(p =>{
-            p.json().then(data =>{
+            console.log(p); // promise
+            p.json().then(data =>{// .json() otpakovanje
                 data.forEach(igra => { // za svaku igru
-
+                    console.log(igra);
                     //pravi se red
                     let red = document.createElement("tr");
                     red.classList.add("redIgra");
@@ -69,7 +74,10 @@ export class User
                     }
                     let button = document.createElement("button");
                     button.type="submit";
+                    button.classList.add('buttons');
                     button.onclick= (ev) => this.obrisiIgru(igra.ticketNumber);//$$ pazi sta prosledis
+                    let fja = imefje();
+                    button.oonclick = fja;
                     button.innerHTML="Obrisi";
                     red.appendChild(button);
                 });
@@ -105,6 +113,7 @@ export class User
         }//for
         let button = document.createElement("button");
         button.type="submit";
+        button.classList.add('buttons');
         button.onclick= (ev) => this.kreirajIgru(tabela);
         button.innerHTML="Dodaj";
         divGame.appendChild(button);
@@ -137,6 +146,7 @@ export class User
             divGame.appendChild(input);
         }//for
         button = document.createElement("button");
+        button.classList.add('buttons');
         button.type="submit";
         button.onclick= (ev) => this.updateIgru(tabela);
         button.innerHTML="Izmeni";
@@ -192,6 +202,7 @@ export class User
                     }
                     let button = document.createElement("button");
                     button.type="submit";
+                    button.classList.add('buttons');
                     button.onclick= (ev) => this.obrisiIgru(igra.ticketNumber);//$$ pazi sta prosledis
                     button.innerHTML="Obrisi";
                     red.appendChild(button);
